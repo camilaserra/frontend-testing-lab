@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# Frontend Testing Lab 🧪
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório é um laboratório de estudos focado em **testes automatizados no front-end**, utilizando uma stack moderna e amplamente adotada no mercado.
 
-Currently, two official plugins are available:
+O objetivo é praticar **boas práticas**, organização de testes e diferentes níveis de validação da aplicação.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Stack de Testes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Cypress** → Testes End-to-End (E2E)
+- **Testing Library** → Testes de componentes com foco no comportamento do usuário
+- **Vitest** → Testes unitários rápidos e modernos
+- **Vite** → Ambiente de desenvolvimento rápido
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 Objetivos do Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Praticar testes **unitários**, **de componentes** e **E2E**
+- Escrever testes focados no comportamento do usuário
+- Explorar boas práticas de organização de testes
+- Simular cenários reais de aplicações front-end
+- Servir como base de estudo e referência para entrevistas técnicas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Estrutura do Projeto (exemplo)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+├── src/
+│   ├── components/
+│   └── pages/
+├── tests/
+│   └── unit/
+├── cypress/
+│   ├── e2e/
+│   ├── fixtures/
+│   └── support/
+├── package.json
+└── README.md
