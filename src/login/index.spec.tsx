@@ -63,6 +63,4 @@ describe("Testa o componente de login", () => {
 
         expect(navigateMock).toHaveBeenCalledTimes(1)
     })
-
-
 })
